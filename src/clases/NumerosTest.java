@@ -22,5 +22,16 @@ class NumerosTest {
 	private static Stream<Arguments> capicua() {
 		return Stream.of(Arguments.of(100, false), Arguments.of(101, true));
 	}
+	
+	@ParameterizedTest
+	@MethodSource("primo")
+	void testEsPrimo(int numero, boolean expected) {
+		num.numero = numero;
+		assertEquals(num.esPrimo(), expected);
+	}
+
+	private static Stream<Arguments> primo() {
+		return Stream.of(Arguments.of(1, false), Arguments.of(4, false), Arguments.of(5, true), Arguments.of(23, true));
+	}
 
 }
