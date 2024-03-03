@@ -20,7 +20,7 @@ class TablasTest {
 	}
 	
 	private static Stream<Arguments> esmagica() {
-		return Stream.of(Arguments.of(new int[][] {{2, 7, 6}, {9, 5, 1}, {4, 3, 8}}));
+		return Stream.of(Arguments.of(new int[][] {{2, 7, 6}, {9, 5, 1}, {4, 3, 8}}, new int[][] {{1, 1, 1}, {2, 2, 2}, {3, 3, 3}}));
 	}
 	
 	@ParameterizedTest
@@ -30,7 +30,7 @@ class TablasTest {
 	}
 	
 	private static Stream<Arguments> esmagicant() {
-		return Stream.of(Arguments.of(new int[][] {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}}));
+		return Stream.of(Arguments.of(new int[][] {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}}, new int[][] {{1, 2, 3}, {1, 2, 3}, {1, 2, 3}}));
 	}
 	
 	@ParameterizedTest
